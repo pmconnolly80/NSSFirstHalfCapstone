@@ -1,0 +1,185 @@
+body {
+  font: 100% "Helvetica", sans-serif;
+  font-size-adjust: 0.5;
+  background-color: #006B00;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.btn {
+  background-color: #339933;
+  color: white;
+  font-size: 20px;
+}
+
+.btn-group {
+  color: #006B00;
+}
+
+.wrapper {
+  padding: 20%;
+  position: center;
+}
+
+.row {
+  position: center;
+  padding: 1%;
+  margin: center;
+}
+
+.viewStyling {
+  vertical-align: center;
+}
+
+.tremontlogo {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  margin-right: 20%;
+  margin-left: 20%;
+/*  vertical-align: center;
+  display: inline-flex;*/
+}
+
+.container-nav-top {
+  background-color: #339933;
+}
+
+.container-nav-bottom {
+  padding: 1%;
+  background-color: #339933;
+}
+
+
+.loginCtrl {
+  border: 1px solid black;
+  padding: 5%;
+  margin: center;
+}
+
+.loginAll {
+  border: 1px solid black;
+  padding: 5%;
+  margin: center;
+  background-color: #339933;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.searchText{
+  vertical-align: center;
+  text-align: center;
+  padding-top: 5%;
+
+}
+
+.searchPage {
+  text-align: center;
+  margin: 2.5%;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: #339933;
+  position: static;
+}
+
+/*.searchWrapper {
+  border-radius: 10px;
+  border: 2px solid black;
+  border-style: none solid solid none;
+}*/
+
+.searchInput {
+  font-size: 20px;
+  padding: 5%; 
+  vertical-align: center;
+  text-align: center;
+  color: black;
+}
+
+.searchButton {
+  padding-bottom: 2%;
+  vertical-align: center;
+  text-align: center;
+
+}
+
+.searchDisplay {
+  border: 2px solid black;
+  margin: 2.5%;
+  list-style: none;
+  display: inline-flex;
+  width: 100%;
+  border-radius: 10px;
+  border-style: none solid solid none;
+  background-color: #339933;
+
+}
+
+.addBeerButton {
+/*  padding: 5%;*/
+  vertical-align: center;
+  text-align: center;
+  float: right;  
+}
+
+.flex-container {
+ /* margin: 2.5%;*/
+  list-style: none;
+  display: inline-flex;
+  flex-flow: row wrap;
+  padding-bottom: 10%;
+  width: 100%; 
+
+}
+
+
+.left-container {
+  background-color: ;
+  padding: 5px;
+  height: 75%;
+  float: left;
+}
+
+.right-container {
+  float: right;
+  margin: center;
+  background-color: ;
+  padding: 5px;
+  padding-left: 10px;
+  width: 75%;
+  border-width: 100%;
+  font-color: white;
+}
+
+.container-beer {
+  border: 2px solid black;
+  margin: 0.5%;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  border-style: none solid solid none;
+  background-color: #339933;
+}
+
+.logoutView {
+  padding: 10%;
+  padding-top: 35%;
+  text-align: center;
+
+  margin: center;
+}
+
+.updateAccount {
+  padding-bottom: 10%;
+
+}
+
+.container-logout {
+  padding: 10%;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #339933;
+}

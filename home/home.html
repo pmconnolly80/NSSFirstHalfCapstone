@@ -1,0 +1,20 @@
+    <div>
+      <div><img ng-src="./tremontlogo.png" class="tremontlogo" /></div>
+
+
+    </div>
+
+    <div>
+        <label class="item item-input">
+    <!-- <span class="input-label">Search</span> -->
+          <input type="text" ng-model="$parent.userInput" placeholder="Search for Beer to Add to List">
+        </label>
+        <button class="button" ng-click="search()">Search</button>
+
+        <img src="{{beer.labels.icon}}" width="100px" alt="beer picture here">
+        <h2>{{beer.nameDisplay}}</h2>
+        <h4>Brewery: {{beer.breweries[0].name}}
+        <p><strong>Style: </strong> {{beer.style.name}}</p>
+        <p><strong>ABV: </strong>{{beer.abv}} <strong>IBU: </strong>{{beer.ibu}}</p> 
+        <button class="button" ng-click="">Add Beer To List</button>
+    </div>
