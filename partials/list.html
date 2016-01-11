@@ -1,7 +1,17 @@
 
-
-    <div>
-      <div><img ng-src="./tremontlogo.png" class="tremontlogo" /></div>
-
-
+ <div class= "flex-container">
+    <div class="container-beer" ng-repeat = "item in beers  | orderBy: 'dateAdded'">
+        <div class="left-container">
+            <img src="{{item.beer.labels.large}}" width="150px" alt="beer picture here">
+        </div>
+    
+        <div class="right-container">
+            <h2>{{item.beer.nameDisplay}}</h2>
+            <h4>{{item.beer.breweries[0].name}}</h4>
+            <h5><p>Style: {{item.beer.style.name}}</p></h5>
+            <h5><p>ABV: {{item.beer.abv}}</p></h5>
+            <h5><p>Tasted Date: {{data.beer.Date}}</p></h5>
+        </div>     
     </div>
+</div>
+    <!-- <button class="button" ng-click="refreshList()">Refresh List</button> -->

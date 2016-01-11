@@ -1,28 +1,37 @@
-<div class="col-md-6 col-md-offset-3">
-    <h2 class="loginPage">Login</h2>
 
-    <form name="loginForm" novalidate>
-        <div class="form-group has-feedback" ng-class="{ 'has-error': loginForm.email.$invalid && loginForm.email.$dirty }">
-            <label for="email">Email</label>
-              <input server-error class="form-control input-lg" type="text" name="email" ng-model="user.email" placeholder="Email" required autofocus>
-              <span class="ion-at form-control-feedback"></span>
-            <div class="help-block" ng-if="loginForm.email.$dirty" ng-messages="loginForm.email.$error">
-                <div ng-message="server">{{errorMessage.email}}</div>
-            </div>
-        </div>
 
-        <div class="form-group has-feedback" ng-class="{ 'has-error': loginForm.password.$invalid && loginForm.password.$dirty }">
-              <label for="password">Password</label>
-                <input server-error class="form-control input-lg" type="password" name="password" ng-model="user.password" placeholder="Password" required>
-                    <span class="ion-key form-control-feedback"></span>
-            <div class="help-block" ng-if="loginForm.password.$dirty" ng-messages="loginForm.password.$error">
-                <div ng-message="server">{{errorMessage.password}}</div>
-            </div>
-        </div>
-            <div class="form-actions">
-            <button type="submit" class="btn btn-primary" ng-click="login()">Login</button>
-            <a href="#/register" class="btn btn-link">Register</a>
-        </div>
-    </form>
+<div class="wrapper">
+<div class="loginAll">
+<form class="form-horizontal">
+    <div class="form-group form-group-lg">
+        <label class="col-sm-12 control-label" for="formGroupInputLarge">
+            <div>Email</div >
+            <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Email" ng-model="email" />
+        </label>
+    </div>
+    <div class="form-group form-group-lg">
+        <label class="col-sm-12 control-label" for="formGroupInputLarge">
+            <div>Password</div >
+            <input  class="form-control" type="password" id="formGroupInputLarge" placeholder="Password" ng-model="pass" />
+        </label>
+    </div>
+    <div class="form-group form-group-lg">
+        <label ng-cloak ng-show="createMode" class="col-sm-12 control-label" for="formGroupInputLarge">
+            <div>Please Confirm Password</div >
+            <input  class="form-control" type="password" id="formGroupInputLarge" placeholder="Password" ng-model="confirm" />
+        </label>
+    </div>
+</form>
 
+
+<div class="loginCtr">
+    <div>   
+        <button ng-click="login(email, pass)" ng-hide="createMode" type="button" class="btn btn-primary btn-lg btn-block">Log In</button>
+        <button ng-click="createMode = true" ng-hide="createMode" type="button" class="btn btn-primary btn-lg btn-block">Register</button>
+        <button ng-cloak ng-show="createMode" ng-click="createAccount()" type="button" class="btn btn-primary btn-lg btn-block">Create Account</button>
+        <button ng-cloak ng-show="createMode" ng-click="createMode = false" type="button" class="btn btn-primary btn-lg btn-block">Cancel</button>
+        <p ng-show="err" class="error">{{err}}</p>
+    </div>
 </div>
+</div>
+</div> 

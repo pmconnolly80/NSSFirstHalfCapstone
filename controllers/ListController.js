@@ -10,11 +10,11 @@ angular.module('ListCtrl', ['firebase', 'firebase.utils', 'firebase.auth', 'ngRo
   }])
 
   .constant("PROXY", {
-    url: 'http://192.168.33.10:1337/api.brewerydb.com/v2'
+    url: 'http://localhost:1337/api.brewerydb.com/v2'
   })
 
   .factory(['storage', function(storage) {
-     var ref = new Firebase("https://firsthalfcapstone.firebaseio.com/users");
+     var ref = new Firebase("https://beerlist.firebaseio.com/users");
      console.log("auth response", ref.getAuth());
 
      // auth = $firebaseAuth(ref);
@@ -34,7 +34,7 @@ angular.module('ListCtrl', ['firebase', 'firebase.utils', 'firebase.auth', 'ngRo
       $scope.dateAdded = Date();
       console.log(Date());
 
-      var listRef = new Firebase("https://firsthalfcapstone.firebaseio.com/users/" + $scope.userId + "/list");
+      var listRef = new Firebase("https://beerlist.firebaseio.com/users/" + $scope.userId + "/list");
       $scope.beers = $firebaseArray(listRef);
       console.log($scope.dateAdded);
       // Order the collection by the value of the breweries key
@@ -66,3 +66,6 @@ angular.module('ListCtrl', ['firebase', 'firebase.utils', 'firebase.auth', 'ngRo
     };
 
   }]);
+
+
+

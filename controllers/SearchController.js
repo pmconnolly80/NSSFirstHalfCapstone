@@ -11,11 +11,11 @@ angular.module('SearchCtrl', ['firebase', 'firebase.utils', 'firebase.auth', 'ng
   }])
 
   .constant("PROXY", {
-    url: 'http://192.168.33.10:1337/api.brewerydb.com/v2'
+    url: 'http://localhost:1337/api.brewerydb.com/v2'
   })
 
   .factory(['storage', function(storage) {
-     var ref = new Firebase("https://firsthalfcapstone.firebaseio.com/users");
+     var ref = new Firebase("https://beerlist.firebaseio.com/users");
      console.log("auth response", ref.getAuth());
 
      // auth = $firebaseAuth(ref);
@@ -55,7 +55,7 @@ $scope.userId = storage.get("userId");
     console.log($scope.beer);
       //1. Set up firebase reference to specific user id location
       //   i.e. : 'https://beerlist.firebaseio.com/users/{{user.id}}/{{newBeer}}'
-      var userListRef = new Firebase("https://firsthalfcapstone.firebaseio.com/users/" + $scope.userId + "/list");
+      var userListRef = new Firebase("https://beerlist.firebaseio.com/users/" + $scope.userId + "/list");
       //2. Ensure we have the correct data (beer)
       console.log($scope.userInput);
       console.log($scope.beer);
@@ -74,7 +74,6 @@ $scope.userId = storage.get("userId");
 }]);
 
  
-
 
 
 

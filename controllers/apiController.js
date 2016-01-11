@@ -11,7 +11,7 @@ angular.module('apiCtrl', ['firebase', 'firebase.utils', 'firebase.auth', 'ngRou
 
 
 .constant("PROXY", {
-  url: 'http://192.168.33.10:1337/api.brewerydb.com/v2'
+  url: 'http://localhost:1337/api.brewerydb.com/v2'
 })
 
 .factory('storage', function () {
@@ -30,7 +30,7 @@ angular.module('apiCtrl', ['firebase', 'firebase.utils', 'firebase.auth', 'ngRou
 })
 
 .run(['storage', function(storage) {
-   var ref = new Firebase("https://firsthalfcapstone.firebaseio.com/");
+   var ref = new Firebase("https://beerlist.firebaseio.com/");
    console.log("auth response", ref.getAuth());
 
    // auth = $firebaseAuth(ref);
